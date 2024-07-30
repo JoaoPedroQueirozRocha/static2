@@ -18,6 +18,9 @@
             body {
                 margin: 0;
                 padding: 0;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
             }
 
             .container {
@@ -26,7 +29,9 @@
                 justify-content: center;
                 align-items: center;
                 width: 100vw;
-                height: calc(100vh - env(safe-area-inset-bottom));
+                height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
             }
 
             header {
@@ -68,7 +73,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 width: 100vw;
-                height: calc(10vh - env(safe-area-inset-bottom));
+                height: 10vh;
             }
 
             .list-section {
