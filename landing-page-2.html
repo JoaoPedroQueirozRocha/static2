@@ -21,6 +21,10 @@
                 height: 100vh;
                 display: flex;
                 flex-direction: column;
+                padding-top: env(safe-area-inset-top);
+                padding-bottom: env(safe-area-inset-bottom);
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
             }
 
             .container {
@@ -32,6 +36,8 @@
                 height: calc(100vh - env(safe-area-inset-top) - env(safe-area-inset-bottom));
                 padding-top: env(safe-area-inset-top);
                 padding-bottom: env(safe-area-inset-bottom);
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
             }
 
             header {
@@ -39,6 +45,8 @@
                 justify-content: center;
                 align-items: center;
                 height: 6%;
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
             }
             .img-logo {
                 margin-top: 10px;
@@ -54,6 +62,8 @@
                 background-image: url('./img_vou_quitar-1.png');
                 background-size: cover;
                 background-position: center;
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
             }
 
             .img-section h1 {
@@ -74,6 +84,8 @@
                 align-items: center;
                 width: 100vw;
                 height: 10vh;
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
             }
 
             .list-section {
@@ -106,6 +118,8 @@
                 bottom: 0;
                 width: 100%;
                 margin-bottom: 20px;
+                padding-left: env(safe-area-inset-left);
+                padding-right: env(safe-area-inset-right);
             }
 
             .btn-cta button {
@@ -157,6 +171,7 @@
         <script>
             const btn = document.querySelector('.btn-cta button');
             btn.addEventListener('click', () => {
+                /*TODO: adicionar o link para redirecionamento*/
                 const urlBrokerParams = window.plusdinUrlsBroker.getUrlParamFromLink('');
                 const redirectUtl = 'https://responda.vouquitar.com/vouquitar-cc-br-v2/index.html';
                 window.dataLayer = window.dataLayer || [];
