@@ -26,13 +26,14 @@
                 justify-content: center;
                 align-items: center;
                 width: 100vw;
-                height: calc(100vh - env(safe-area-inset-bottom)); /* Ajuste para considerar a barra de navegação */
+                height: calc(100vh - env(safe-area-inset-bottom));
             }
 
             header {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+                height: 6%;
             }
             .img-logo {
                 margin-top: 10px;
@@ -44,7 +45,7 @@
                 justify-content: center;
                 align-items: center;
                 width: 100vw;
-                height: calc(85vh - env(safe-area-inset-bottom)); /* Ajuste para considerar a barra de navegação */
+                height: calc(85vh - env(safe-area-inset-bottom));
                 background-image: url('./img_vou_quitar 1.svg');
                 background-size: cover;
                 background-position: center;
@@ -67,7 +68,7 @@
                 justify-content: flex-end;
                 align-items: center;
                 width: 100vw;
-                height: calc(10vh - env(safe-area-inset-bottom)); /* Ajuste para considerar a barra de navegação */
+                height: calc(10vh - env(safe-area-inset-bottom));
             }
 
             .list-section {
@@ -151,6 +152,7 @@
         <script>
             const btn = document.querySelector('.btn-cta button');
             btn.addEventListener('click', () => {
+                /*TODO: adicionar o link para redirecionamento*/
                 const urlBrokerParams = window.plusdinUrlsBroker.getUrlParamFromLink('');
                 const redirectUtl = 'https://responda.vouquitar.com/vouquitar-cc-br-v2/index.html';
                 window.dataLayer = window.dataLayer || [];
